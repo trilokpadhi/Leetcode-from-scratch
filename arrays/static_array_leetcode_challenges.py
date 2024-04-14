@@ -56,19 +56,14 @@ def removeElement(nums: List[int], val: int) -> int:
             slow += 1
     return slow
 
-
 # Challenge3
-# https://leetcode.com/problems/shuffle-the-array/
+# https://leetcode.com/problems/shuffle-the-array
 
-class Solution:
-    def shuffle(self, nums: List[int], n: int) -> List[int]:
-
-        index = 0
-        shuffle_nums = []
-        while index < n:
-            shuffle_nums.append(nums[index])
-            shuffle_nums.append(nums[n+index])
-            index = index+1
-        return shuffle_nums
+def shuffle(nums: List[int], n: int) -> List[int]:
+    res = []
+    for i in range(n):
+        res.append(nums[i])
+        res.append(nums[i + n])
+    return res
 
     
